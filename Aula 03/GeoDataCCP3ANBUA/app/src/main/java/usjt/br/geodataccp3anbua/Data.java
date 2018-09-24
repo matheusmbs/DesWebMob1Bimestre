@@ -9,7 +9,7 @@ package usjt.br.geodataccp3anbua;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Mock {
+public class Data {
     public static ArrayList<String> listarNomes(ArrayList<Pais> paises){
         ArrayList<String> nomes = new ArrayList<>();
         for (Pais pais : paises) {

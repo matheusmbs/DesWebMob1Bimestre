@@ -3,15 +3,11 @@ package usjt.br.geodataccp3anbua;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -30,8 +26,8 @@ public class ListarPaisesActivity extends AppCompatActivity {
         atividade = this;
         Intent intent = getIntent();
         String continente = intent.getStringExtra(MainActivity.CHAVE);
-        paises = Mock.listarPaises(continente);
-        nomes = Mock.listarNomes(paises);
+        paises = Data.listarPaises(continente);
+        nomes = Data.listarNomes(paises);
 
         ListView listView = (ListView) findViewById(R.id.lista_paises);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -45,7 +41,7 @@ public class ListarPaisesActivity extends AppCompatActivity {
                                     int position, long id) {
 
                 // manda para a tela de detalhe
-                Intent intent = new Intent(atividade, MostrarPais.class);
+                Intent intent = new Intent(atividade, DetalhePaisActivity.class);
                 intent.putExtra(PAIS, paises.get(position));
 
                 startActivity(intent);

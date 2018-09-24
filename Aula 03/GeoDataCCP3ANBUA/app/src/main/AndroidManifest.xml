@@ -21,7 +21,7 @@
             android:label="@string/title_activity_listar_paises"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MostrarPais"
+            android:name=".DetalhePaisActivity"
             android:label="@string/title_activity_mostrar_pais"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
